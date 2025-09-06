@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mrPeakStudio - Consultoría Digital, IA y SEO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'brutal': '8px 8px 0px 0px #000',
+                        'brutal-sm': '4px 4px 0px 0px #000',
+                        'brutal-lg': '12px 12px 0px 0px #000',
+                    },
+                    colors: {
+                        accent: '#00E676',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            border-color: #000;
+        }
+        html {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+        }
+        .shadow-brutal {
+            box-shadow: 8px 8px 0px 0px #000;
+        }
+    </style>
+</head>
+<body class="bg-white text-black antialiased">
+    <main class="min-h-screen bg-white text-black selection:bg-black selection:text-white">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b-4 border-black">
+            <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+                <a href="#top" class="font-black tracking-tight text-xl md:text-2xl" aria-label="mrPeakStudio">
+                    mr<span class="px-1 bg-black text-white">Peak</span>Studio
+                </a>
+                <nav class="hidden md:flex gap-4 font-semibold">
+                    <a href="#servicios" class="underline-offset-4 hover:underline">Servicios</a>
+                    <a href="#proceso" class="underline-offset-4 hover:underline">Proceso</a>
+                    <a href="#resultados" class="underline-offset-4 hover:underline">Resultados</a>
+                    <a href="#casos" class="underline-offset-4 hover:underline">Casos</a>
+                    <a href="#contacto" class="underline-offset-4 hover:underline">Contacto</a>
+                </nav>
+                <a href="#contacto" class="md:inline-flex hidden px-4 py-2 border-4 border-black bg-white text-black hover:bg-black hover:text-white transition-colors uppercase text-sm font-black" aria-label="Hablemos">
+                    Hablemos
+                </a>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section id="top" class="border-b-4 border-black">
+            <div class="mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-12 gap-6">
+                <div class="md:col-span-8">
+                    <h1 class="text-4xl md:text-6xl leading-tight font-black tracking-tight">
+                        Consultoría digital, IA y SEO que <span class="bg-black text-white px-2">transforman</span> tu negocio en semanas.
+                    </h1>
+                    <p class="mt-6 text-lg md:text-xl max-w-2xl">
+                        Sin humo. Sin promesas vacías. <span class="font-bold">Solo resultados medibles.</span>
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#contacto" class="px-6 py-4 border-4 border-black bg-black text-white hover:bg-white hover:text-black transition-colors text-base md:text-lg font-black uppercase">
+                            Quiero resultados
+                        </a>
+                        <a href="#servicios" class="px-6 py-4 border-4 border-black bg-white text-black hover:bg-black hover:text-white transition-colors text-base md:text-lg font-black uppercase">
+                            Ver servicios
+                        </a>
+                    </div>
+                    <ul class="mt-8 flex flex-wrap gap-3 text-sm font-semibold" aria-label="Etiquetas">
+                        <li class="px-3 py-1 border-4 border-black" style="background-color: #00E676;">Consultoría digital</li>
+                        <li class="px-3 py-1 border-4 border-black" style="background-color: #00E676;">IA aplicada</li>
+                        <li class="px-3 py-1 border-4 border-black" style="background-color: #00E676;">SEO avanzado</li>
+                        <li class="px-3 py-1 border-4 border-black" style="background-color: #00E676;">Automatizaciones</li>
+                        <li class="px-3 py-1 border-4 border-black" style="background-color: #00E676;">Formación ejecutiva</li>
+                    </ul>
+                </div>
+                <aside class="md:col-span-4">
+                    <div class="p-6 border-4 border-black" style="background-color: #00E676;">
+                        <p class="text-sm font-black uppercase">Propuesta directa</p>
+                        <p class="mt-2 text-lg font-semibold">
+                            Menos ruido, más crecimiento. Estrategia clara, ejecución real, medición continua.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section id="servicios" class="border-b-4 border-black">
+            <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+                <header class="mb-8 flex items-end justify-between">
+                    <h2 class="text-3xl md:text-4xl font-black tracking-tight">Servicios</h2>
+                    <div class="hidden md:block text-sm font-semibold">Grid brutalista 2×2</div>
+                </header>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <article class="p-8 border-4 border-black shadow-brutal bg-white text-black">
+                        <h3 class="text-2xl md:text-3xl font-black">Consultoría Estratégica</h3>
+                        <p class="mt-3 text-lg">Un plan claro y sin rodeos. Sabes qué hacer, cuándo y por qué.</p>
+                        <a href="#contacto" class="mt-6 inline-block px-5 py-3 border-4 border-black font-black uppercase bg-black text-white hover:bg-white hover:text-black transition-colors" aria-label="Contactar sobre Consultoría Estratégica">
+                            Me interesa
+                        </a>
+                    </article>
+                    <article class="p-8 border-4 border-black shadow-brutal bg-black text-white">
+                        <h3 class="text-2xl md:text-3xl font-black">SEO Avanzado</h3>
+                        <p class="mt-3 text-lg">Crecer en orgánico con datos, no discursos. +40 % en 6 meses.</p>
+                        <a href="#contacto" class="mt-6 inline-block px-5 py-3 border-4 border-black font-black uppercase bg-white text-black hover:bg-black hover:text-white transition-colors" aria-label="Contactar sobre SEO Avanzado">
+                            Me interesa
+                        </a>
+                    </article>
+                    <article class="p-8 border-4 border-black shadow-brutal bg-black text-white">
+                        <h3 class="text-2xl md:text-3xl font-black">Automatizaciones</h3>
+                        <p class="mt-3 text-lg">Procesos que se hacen solos. Tú mandas, la IA ejecuta.</p>
+                        <a href="#contacto" class="mt-6 inline-block px-5 py-3 border-4 border-black font-black uppercase bg-white text-black hover:bg-black hover:text-white transition-colors" aria-label="Contactar sobre Automatizaciones">
+                            Me interesa
+                        </a>
+                    </article>
+                    <article class="p-8 border-4 border-black shadow-brutal bg-white text-black">
+                        <h3 class="text-2xl md:text-3xl font-black">Formación Ejecutiva</h3>
+                        <p class="mt-3 text-lg">Equipos que aprenden IA desde el día uno. Sin relleno, solo práctica.</p>
+                        <a href="#contacto" class="mt-6 inline-block px-5 py-3 border-4 border-black font-black uppercase bg-black text-white hover:bg-white hover:text-black transition-colors" aria-label="Contactar sobre Formación Ejecutiva">
+                            Me interesa
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proceso -->
+        <section id="proceso" class="border-b-4 border-black">
+            <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-8">Proceso en 4 pasos</h2>
+                <ol class="grid md:grid-cols-4 gap-6">
+                    <li class="p-6 border-4 border-black bg-white">
+                        <div class="flex items-baseline justify-between">
+                            <span class="text-5xl font-black leading-none">01</span>
+                            <span class="px-2 py-1 border-4 border-black text-xs font-black uppercase" style="background-color: #00E676;">paso</span>
+                        </div>
+                        <h3 class="mt-4 text-2xl font-black">Diagnóstico</h3>
+                        <p class="mt-2 text-base">Detectamos qué frena tu crecimiento.</p>
+                    </li>
+                    <li class="p-6 border-4 border-black bg-white">
+                        <div class="flex items-baseline justify-between">
+                            <span class="text-5xl font-black leading-none">02</span>
+                            <span class="px-2 py-1 border-4 border-black text-xs font-black uppercase" style="background-color: #00E676;">paso</span>
+                        </div>
+                        <h3 class="mt-4 text-2xl font-black">Plan</h3>
+                        <p class="mt-2 text-base">Hoja de ruta en días, no meses.</p>
+                    </li>
+                    <li class="p-6 border-4 border-black bg-white">
+                        <div class="flex items-baseline justify-between">
+                            <span class="text-5xl font-black leading-none">03</span>
+                            <span class="px-2 py-1 border-4 border-black text-xs font-black uppercase" style="background-color: #00E676;">paso</span>
+                        </div>
+                        <h3 class="mt-4 text-2xl font-black">Ejecución</h3>
+                        <p class="mt-2 text-base">Ponemos en marcha soluciones reales.</p>
+                    </li>
+                    <li class="p-6 border-4 border-black bg-white">
+                        <div class="flex items-baseline justify-between">
+                            <span class="text-5xl font-black leading-none">04</span>
+                            <span class="px-2 py-1 border-4 border-black text-xs font-black uppercase" style="background-color: #00E676;">paso</span>
+                        </div>
+                        <h3 class="mt-4 text-2xl font-black">Medición</h3>
+                        <p class="mt-2 text-base">Resultados visibles desde el primer mes.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Resultados & Confianza -->
+        <section id="resultados" class="border-b-4 border-black">
+            <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-8">Resultados y confianza</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-8 border-4 border-black bg-white">
+                        <ul class="space-y-4">
+                            <li class="text-3xl md:text-4xl font-black">+150M palabras clave indexadas</li>
+                            <li class="text-3xl md:text-4xl font-black">+40 % tráfico orgánico</li>
+                            <li class="text-3xl md:text-4xl font-black">50+ proyectos internacionales</li>
+                        </ul>
+                    </div>
+                    <div class="p-8 border-4 border-black bg-black text-white">
+                        <p class="text-sm font-black uppercase">Clientes</p>
+                        <div class="mt-4 grid grid-cols-3 gap-4">
+                            <div class="aspect-[3/1] flex items-center justify-center border-4 border-white text-white font-black">Airbnb</div>
+                            <div class="aspect-[3/1] flex items-center justify-center border-4 border-white text-white font-black">Volkswagen</div>
+                            <div class="aspect-[3/1] flex items-center justify-center border-4 border-white text-white font-black">LaLiga</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Casos Flash -->
+        <section id="casos" class="border-b-4 border-black">
+            <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+                <header class="mb-8 flex items-end justify-between">
+                    <h2 class="text-3xl md:text-4xl font-black tracking-tight">Casos flash</h2>
+                    <span class="hidden md:inline-block px-3 py-1 border-4 border-black font-black uppercase" style="background-color: #00E676;">real</span>
+                </header>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <article class="p-8 border-4 border-black bg-white">
+                        <h3 class="text-2xl md:text-3xl font-black">AIRBNB</h3>
+                        <p class="mt-2 text-lg">Reducimos el tiempo de indexación en un 30 %.</p>
+                    </article>
+                    <article class="p-8 border-4 border-black bg-white">
+                        <h3 class="text-2xl md:text-3xl font-black">VOLKSWAGEN</h3>
+                        <p class="mt-2 text-lg">Automatizamos su reporting en 3 semanas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto / CTA Final -->
+        <section id="contacto" class="border-b-8 border-black" aria-labelledby="cta-title">
+            <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+                <h2 id="cta-title" class="text-4xl md:text-5xl font-black tracking-tight">
+                    ¿Quieres resultados o discursos?
+                </h2>
+                <p class="mt-4 text-lg max-w-2xl">
+                    Escríbenos y en <span class="font-bold">48 horas</span> te proponemos un plan claro. Sin rodeos.
+                </p>
+
+                <form class="mt-10 grid md:grid-cols-3 gap-6" aria-label="Formulario de contacto">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-black uppercase" for="name">Nombre</label>
+                        <input id="name" type="text" required class="w-full px-4 py-3 border-4 border-black focus:outline-none bg-white" placeholder="Tu nombre" />
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-black uppercase" for="email">Email</label>
+                        <input id="email" type="email" required class="w-full px-4 py-3 border-4 border-black focus:outline-none bg-white" placeholder="tucorreo@empresa.com" />
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-black uppercase" for="service">Interés</label>
+                        <select id="service" class="w-full px-4 py-3 border-4 border-black bg-white focus:outline-none">
+                            <option>Consultoría Estratégica</option>
+                            <option>SEO Avanzado</option>
+                            <option>Automatizaciones</option>
+                            <option>Formación Ejecutiva</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-3 space-y-2">
+                        <label class="block text-sm font-black uppercase" for="message">Mensaje</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-3 border-4 border-black focus:outline-none bg-white resize-none" placeholder="Cuéntanos brevemente tu reto"></textarea>
+                    </div>
+                    <div class="md:col-span-3 flex items-center gap-4">
+                        <button type="submit" class="px-8 py-4 border-4 border-black bg-black text-white hover:bg-white hover:text-black transition-colors font-black uppercase">
+                            Enviar
+                        </button>
+                        <span class="text-xs md:text-sm font-semibold">Respondemos en 48h. Sin spam.</span>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black text-white">
+            <div class="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="font-semibold">© 2025 mrPeakStudio</p>
+                <div class="flex items-center gap-3 text-xs">
+                    <a href="#top" class="px-3 py-1 border-4 border-white hover:bg-white hover:text-black transition-colors font-black uppercase">Arriba</a>
+                    <span class="opacity-70">Hecho con diseño neo‑brutalista</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

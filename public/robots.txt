@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mrpeakstudio.com/sitemap.xml
+
+# Block access to admin or sensitive areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all bots to crawl the site
+Crawl-delay: 1
