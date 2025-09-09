@@ -21,7 +21,7 @@ export const Contact: React.FC = () => {
             onClick={handleEmailClick}
             variant="primary" 
             size="lg"
-            className="text-xl md:text-2xl px-8 md:px-12 py-6 md:py-8 font-black animate-pulse-hover animate-slide-in-up delay-300 cursor-pointer"
+            className="text-xl md:text-2xl px-8 md:px-12 py-6 md:py-8 font-black cursor-pointer"
           >
             hola@mrpeakstudio.com
           </Button>
