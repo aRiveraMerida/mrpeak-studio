@@ -20,7 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
   const baseClasses = 'border-4 border-black font-black uppercase transition-colors inline-block text-center';
   
   const variantClasses = {
-    primary: 'bg-black text-white hover:bg-white hover:text-black',
+    primary: 'bg-black text-white hover:bg-[#00E676] hover:text-black',
     secondary: 'bg-white text-black hover:bg-black hover:text-white'
   };
   
