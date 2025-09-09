@@ -7,7 +7,7 @@ export const Results: React.FC = () => {
     <section id="resultados" className="border-b-4 border-black">
       <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
         <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-8 animate-slide-in-left">
-          Resultados y <span className="animate-blink">confianza</span>
+          Resultados y <span className="text-black bg-[#00E676] px-1 animate-gentle-glow">confianza</span>
         </h2>
         
         <Card className="p-8 animate-slide-in-up delay-200 brutal-hover max-w-4xl mx-auto" shadow={false}>
@@ -33,7 +33,7 @@ export const Results: React.FC = () => {
             <p className="text-sm font-black uppercase mb-4 tracking-wider">en empresas como</p>
             <p className="text-base md:text-lg font-semibold leading-relaxed">
               Airbnb, Volkswagen, LaLiga, Skyscanner, ThePowerMBA, Factorial, <br className="hidden md:block" />
-              Nuvola, Movimer, Upsocl, Gilsa, Gea <span className="animate-blink font-black">y muchas más</span>
+              Nuvola, Movimer, Upsocl, Gilsa, Gea <span className="text-black bg-[#00E676] px-1 animate-gentle-glow font-black">y muchas más</span>
             </p>
           </div>
         </Card>

@@ -7,7 +7,7 @@ export const Cases: React.FC = () => {
     <section id="casos" className="border-b-4 border-black">
       <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
         <header className="mb-8 flex items-end justify-between">
-          <h2 className="text-3xl md:text-4xl font-black tracking-tight animate-slide-in-left">Casos <span className="animate-blink">reales</span></h2>
+          <h2 className="text-3xl md:text-4xl font-black tracking-tight animate-slide-in-left">Casos <span className="text-black bg-[#00E676] px-1 animate-gentle-glow">reales</span></h2>
           <span 
             className="hidden md:inline-block px-3 py-1 border-4 border-black font-black uppercase animate-pulse-hover"
             style={{ backgroundColor: THEME.colors.accent }}

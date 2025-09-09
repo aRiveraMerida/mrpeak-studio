@@ -14,7 +14,7 @@ export const THEME = {
 export const SITE_DATA = {
   name: 'mrPeakStudio',
   tagline: 'Consultoría digital, IA y SEO que transforman tu negocio en semanas.',
-  description: 'Sin humo. Sin promesas vacías. Solo resultados medibles.',
+  description: 'Sin humo. Sin promesas vacías.',
   company: {
     linkedin: 'https://www.linkedin.com/company/mr-peak-studio/',
   },

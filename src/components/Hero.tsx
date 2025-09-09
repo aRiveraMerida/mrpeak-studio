@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
           <h1 className="text-4xl md:text-6xl leading-tight font-black tracking-tight animate-slide-in-left" role="banner" aria-label="Título principal de mrPeakStudio">
             {SITE_DATA.tagline.split(' ').map((word, index) => 
               word === 'transforman' ? (
-                <span key={index} className="bg-black text-white px-2 animate-blink">
+                <span key={index} className="bg-black text-white px-2 animate-gentle-glow">
                   {word}
                 </span>
               ) : (
@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
           </h1>
           
           <p className="mt-6 text-lg md:text-xl max-w-2xl animate-slide-in-left delay-200">
-            {SITE_DATA.description} <span className="font-bold animate-blink">Solo resultados medibles.</span>
+            {SITE_DATA.description} <span className="font-bold text-black bg-[#00E676] px-1 animate-gentle-glow">Solo resultados medibles.</span>
           </p>
           
           <div className="mt-8 flex flex-wrap gap-4 animate-slide-in-left delay-300">
@@ -33,15 +33,18 @@ export const Hero: React.FC = () => {
           </div>
           
           <ul className="mt-8 flex flex-wrap gap-3 text-sm font-semibold animate-slide-in-left delay-400" aria-label="Etiquetas">
-            {SITE_DATA.tags.map((tag, index) => (
-              <li 
-                key={tag} 
-                className={`px-3 py-1 border-4 border-black brutal-hover animate-slide-in-up delay-${(index + 1) * 100}`}
-                style={{ backgroundColor: THEME.colors.accent }}
-              >
-                {tag}
-              </li>
-            ))}
+            {SITE_DATA.tags.map((tag, index) => {
+              const delayClass = index === 0 ? 'delay-seq-1' : index === 1 ? 'delay-seq-2' : index === 2 ? 'delay-seq-3' : index === 3 ? 'delay-seq-4' : 'delay-seq-5';
+              return (
+                <li 
+                  key={tag} 
+                  className={`px-3 py-1 border-4 border-black brutal-hover animate-slide-in-up ${delayClass}`}
+                  style={{ backgroundColor: THEME.colors.accent }}
+                >
+                  {tag}
+                </li>
+              );
+            })}
           </ul>
         </div>
         

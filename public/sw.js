@@ -1,8 +1,6 @@
 const CACHE_NAME = 'mrpeakstudio-v1';
 const urlsToCache = [
   '/',
-  '/src/main.tsx',
-  '/src/index.css',
   '/mrpeakstudiologo.webp',
   '/mps-logo.png',
   '/manifest.json'

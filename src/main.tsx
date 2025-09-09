@@ -17,24 +17,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // Performance optimization: preload critical resources
-if ('requestIdleCallback' in window) {
-  requestIdleCallback(() => {
-    // Preload LinkedIn profiles in idle time
-    const linkedInUrls = [
-      'https://www.linkedin.com/in/albertoriveramerida/',
-      'https://www.linkedin.com/in/albert-sort-martinez/',
-      'https://www.linkedin.com/in/orioldelfau/',
-      'https://www.linkedin.com/in/david-dix-hidalgo-986a8a32b/'
-    ];
-    
-    linkedInUrls.forEach(url => {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
-      link.href = url;
-      document.head.appendChild(link);
-    });
-  });
-}
+// Note: LinkedIn prefetch removed to avoid third-party cookies
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

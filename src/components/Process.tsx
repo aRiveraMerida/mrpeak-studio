@@ -7,7 +7,7 @@ export const Process: React.FC = () => {
     <section id="proceso" className="border-b-4 border-black">
       <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
         <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-8 animate-slide-in-left">
-          Proceso en <span className="animate-blink">4 pasos</span>
+          Proceso en <span className="text-black bg-[#00E676] px-1 animate-gentle-glow">4 pasos</span>
         </h2>
         
         <ol className="grid md:grid-cols-4 gap-6">

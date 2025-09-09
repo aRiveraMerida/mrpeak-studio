@@ -8,7 +8,7 @@ export const Team: React.FC = () => {
       <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
         <header className="mb-12 text-center">
           <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4 animate-slide-in-up">
-            El <span className="animate-blink">equipo</span> detrás de mrPeakStudio
+            El <span className="text-black bg-[#00E676] px-1 animate-gentle-glow">equipo</span> detrás de mrPeakStudio
           </h2>
           <p className="text-lg md:text-xl font-semibold max-w-2xl mx-auto animate-slide-in-up delay-200">
             Estrategia, datos y tecnología. Personas que hacen que las cosas pasen.
@@ -21,7 +21,7 @@ export const Team: React.FC = () => {
               key={member.name}
               href={member.linkedin}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="block group"
               aria-label={`Ver perfil de LinkedIn de ${member.name}`}
             >

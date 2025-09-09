@@ -4,7 +4,6 @@
   "framework": "vite",
   "installCommand": "npm install",
   "devCommand": "npm run dev",
-  "functions": {},
   "rewrites": [
     {
       "source": "/(.*)",
@@ -30,6 +29,10 @@
         {
           "key": "Permissions-Policy",
           "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
         }
       ]
     },
@@ -43,7 +46,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(webp|png|jpg|jpeg|ico|svg))",
+      "source": "/(.*)\\.webp",
       "headers": [
         {
           "key": "Cache-Control", 
@@ -52,7 +55,25 @@
       ]
     },
     {
-      "source": "/(.*\\.(js|css))",
+      "source": "/(.*)\\.png",
+      "headers": [
+        {
+          "key": "Cache-Control", 
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.css",
       "headers": [
         {
           "key": "Cache-Control",

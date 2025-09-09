@@ -58,16 +58,22 @@ h1, h2, h3, h4, h5, h6 {
   @apply w-full px-4 py-3 border-4 border-black focus:outline-none bg-white;
 }
 
-/* Animaciones personalizadas */
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0.3; }
+/* Animaciones personalizadas mejoradas */
+@keyframes gentleGlow {
+  0%, 100% { 
+    background-color: #000;
+    color: #fff;
+  }
+  50% { 
+    background-color: #00E676;
+    color: #000;
+  }
 }
 
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-30px);
   }
   to {
     opacity: 1;
@@ -78,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(30px);
   }
   to {
     opacity: 1;
@@ -89,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes slideInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -100,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.98);
   }
   to {
     opacity: 1;
@@ -108,38 +114,38 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@keyframes pulse {
+@keyframes gentlePulse {
   0%, 100% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 }
 
-/* Clases de animación */
-.animate-blink {
-  animation: blink 2s ease-in-out infinite;
+/* Clases de animación mejoradas */
+.animate-gentle-glow {
+  animation: gentleGlow 3s ease-in-out infinite;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.6s ease-out;
+  animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.6s ease-out;
+  animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-slide-in-up {
-  animation: slideInUp 0.5s ease-out;
+  animation: slideInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-fade-in-scale {
-  animation: fadeInScale 0.4s ease-out;
+  animation: fadeInScale 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-pulse-hover:hover {
-  animation: pulse 0.3s ease-in-out;
+  animation: gentlePulse 0.4s ease-in-out;
 }
 
 /* Transiciones suaves para scroll */
@@ -147,12 +153,31 @@ h1, h2, h3, h4, h5, h6 {
   scroll-behavior: smooth;
 }
 
-/* Animaciones con delay */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
+/* Animaciones con delay - versiones mejoradas */
+.delay-100 { animation-delay: 0.1s; animation-fill-mode: both; }
+.delay-200 { animation-delay: 0.2s; animation-fill-mode: both; }
+.delay-300 { animation-delay: 0.3s; animation-fill-mode: both; }
+.delay-400 { animation-delay: 0.4s; animation-fill-mode: both; }
+.delay-500 { animation-delay: 0.5s; animation-fill-mode: both; }
+.delay-600 { animation-delay: 0.6s; animation-fill-mode: both; }
+.delay-700 { animation-delay: 0.7s; animation-fill-mode: both; }
+.delay-800 { animation-delay: 0.8s; animation-fill-mode: both; }
+
+/* Delays para secuencias de elementos */
+.delay-seq-1 { animation-delay: 0.05s; animation-fill-mode: both; }
+.delay-seq-2 { animation-delay: 0.10s; animation-fill-mode: both; }
+.delay-seq-3 { animation-delay: 0.15s; animation-fill-mode: both; }
+.delay-seq-4 { animation-delay: 0.20s; animation-fill-mode: both; }
+.delay-seq-5 { animation-delay: 0.25s; animation-fill-mode: both; }
+.delay-seq-6 { animation-delay: 0.30s; animation-fill-mode: both; }
+.delay-seq-7 { animation-delay: 0.35s; animation-fill-mode: both; }
+.delay-seq-8 { animation-delay: 0.40s; animation-fill-mode: both; }
+
+/* Estados iniciales para animaciones con delay */
+.delay-100, .delay-200, .delay-300, .delay-400, .delay-500, .delay-600, .delay-700, .delay-800,
+.delay-seq-1, .delay-seq-2, .delay-seq-3, .delay-seq-4, .delay-seq-5, .delay-seq-6, .delay-seq-7, .delay-seq-8 {
+  opacity: 0;
+}
 
 /* Efectos hover mejorados */
 .brutal-hover {
