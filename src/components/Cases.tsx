@@ -21,7 +21,7 @@ export const Cases: React.FC = () => {
             <Card 
               key={caseStudy.c} 
               className={`p-4 animate-fade-in-scale delay-${(index + 1) * 50} brutal-hover group`} 
-              shadow={false}
+              shadow={true}
               invert={index % 2 === 1}
             >
               <h3 className="text-lg md:text-xl font-black mb-2">{caseStudy.c}</h3>

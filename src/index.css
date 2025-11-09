@@ -7,6 +7,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
+  /* Variables de colores para mejor accesibilidad */
+  --color-accent: #00E676;
+  --color-accent-dark: #00C853;
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+  --color-focus: #0066CC;
 }
 
 /* Preload optimization for fonts */
@@ -38,15 +45,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-brutal {
-  @apply px-6 py-4 border-4 border-black font-black uppercase transition-colors;
+  @apply px-6 py-4 border-4 border-black font-black uppercase transition-all duration-200 cursor-pointer;
+}
+
+.btn-brutal:focus-visible {
+  @apply outline-none ring-4 ring-blue-600 ring-offset-2;
 }
 
 .btn-brutal-primary {
-  @apply px-6 py-4 border-4 border-black font-black uppercase transition-colors bg-black text-white hover:bg-white hover:text-black;
+  @apply px-6 py-4 border-4 border-black font-black uppercase transition-all duration-200 bg-black text-white hover:bg-white hover:text-black cursor-pointer;
+}
+
+.btn-brutal-primary:focus-visible {
+  @apply outline-none ring-4 ring-blue-600 ring-offset-2;
 }
 
 .btn-brutal-secondary {
-  @apply px-6 py-4 border-4 border-black font-black uppercase transition-colors bg-white text-black hover:bg-black hover:text-white;
+  @apply px-6 py-4 border-4 border-black font-black uppercase transition-all duration-200 bg-white text-black hover:bg-black hover:text-white cursor-pointer;
+}
+
+.btn-brutal-secondary:focus-visible {
+  @apply outline-none ring-4 ring-blue-600 ring-offset-2;
 }
 
 .card-brutal {
@@ -55,7 +74,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .input-brutal {
-  @apply w-full px-4 py-3 border-4 border-black focus:outline-none bg-white;
+  @apply w-full px-4 py-3 border-4 border-black bg-white transition-all duration-200;
+}
+
+.input-brutal:focus {
+  @apply outline-none ring-4 ring-blue-600 ring-offset-2 border-blue-600;
+}
+
+.input-brutal::placeholder {
+  @apply text-gray-500;
 }
 
 /* Animaciones personalizadas mejoradas */
@@ -182,9 +209,52 @@ h1, h2, h3, h4, h5, h6 {
 /* Efectos hover mejorados */
 .brutal-hover {
   transition: all 0.2s ease;
+  box-shadow: 8px 8px 0px 0px #000;
 }
 
 .brutal-hover:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px 0px #000;
+  transform: translate(0, 0);
+  box-shadow: 0px 0px 0px 0px #000;
+}
+
+.brutal-hover:focus-within {
+  @apply ring-4 ring-blue-600 ring-offset-2;
+}
+
+/* Soporte para usuarios que prefieren movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-gentle-glow,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-slide-in-up,
+  .animate-fade-in-scale,
+  .animate-pulse-hover {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Mejores estados de enfoque para accesibilidad */
+*:focus-visible {
+  outline: 3px solid #0066CC;
+  outline-offset: 2px;
+}
+
+/* Skiplinks para accesibilidad */
+.skip-link {
+  @apply absolute -top-40 left-0 bg-black text-white px-6 py-4 font-bold z-[100] transition-all;
+}
+
+.skip-link:focus {
+  @apply top-4;
 }

@@ -34,9 +34,6 @@ export const Team: React.FC = () => {
                     <h3 className="text-xl md:text-2xl font-black group-hover:underline">
                       {member.name}
                     </h3>
-                    <div className="text-sm md:text-base font-black uppercase tracking-wider opacity-70 mt-1">
-                      {member.role}
-                    </div>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="text-3xl font-black opacity-30">
