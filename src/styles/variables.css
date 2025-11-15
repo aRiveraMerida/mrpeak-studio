@@ -1,0 +1,55 @@
+:root {
+  /* Spacing system - modular 4px base */
+  --spacing: 0.25rem; /* 4px */
+  --xxl: 200px;
+  --xl: 84px;
+  --l: 48px;
+  --m: 24px;
+  --s: 16px;
+  --xs: 8px;
+  --size-28: 28px;
+  
+  /* Layout */
+  --page-padding: 40px;
+  --page-padding-mobile: 16px;
+  --max-content-width: 1512px;
+  
+  /* Colors */
+  --color-black: #362c2c;
+  --color-primary: #00E676;
+  --color-secondary: #828086;
+  --color-secondary-50: #f5f5f5;
+  --color-white: #ffffff;
+  
+  /* Typography sizes */
+  --text-title-1: 66px;
+  --text-title-1--line-height: 62px;
+  --text-title-1-mobile: 46px;
+  --text-title-1-mobile--line-height: 46px;
+  
+  --text-title-2: 40px;
+  --text-title-2--line-height: 1.2;
+  --text-title-2-mobile: 28px;
+  --text-title-2-mobile--line-height: 1.2;
+  
+  --text-text: 16px;
+  --text-text--line-height: 22px;
+  
+  --text-mono: 14px;
+  --text-mono--line-height: normal;
+  --text-mono--letter-spacing: 1.68px;
+  --text-mono--font-weight: 350;
+  --text-mono-mobile: 12px;
+  --text-mono-mobile--line-height: normal;
+  --text-mono-mobile--letter-spacing: 1.44px;
+  --text-mono-mobile--font-weight: 350;
+  
+  /* Border radius */
+  --radius-2xl: 1rem;
+  --radius-lg: 0.5rem;
+  
+  /* Transitions */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --default-transition-duration: 0.15s;
+  --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

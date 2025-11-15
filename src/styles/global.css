@@ -1,0 +1,237 @@
+@import './variables.css';
+
+/* Typography utility classes */
+.text-style-mono {
+  font-family: 'Inter', monospace;
+  font-size: var(--text-mono-mobile);
+  line-height: var(--text-mono-mobile--line-height);
+  font-weight: var(--text-mono-mobile--font-weight);
+  letter-spacing: var(--text-mono-mobile--letter-spacing);
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .text-style-mono {
+    font-size: var(--text-mono);
+    line-height: var(--text-mono--line-height);
+    font-weight: var(--text-mono--font-weight);
+    letter-spacing: var(--text-mono--letter-spacing);
+  }
+}
+
+.text-style-text {
+  font-size: var(--text-text);
+  line-height: var(--text-text--line-height);
+}
+
+.text-style-title-1 {
+  font-size: var(--text-title-1-mobile);
+  line-height: var(--text-title-1-mobile--line-height);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .text-style-title-1 {
+    font-size: var(--text-title-1);
+    line-height: var(--text-title-1--line-height);
+  }
+}
+
+.text-style-title-2 {
+  font-size: var(--text-title-2-mobile);
+  line-height: var(--text-title-2-mobile--line-height);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .text-style-title-2 {
+    font-size: var(--text-title-2);
+    line-height: var(--text-title-2--line-height);
+  }
+}
+
+/* Layout utilities */
+main {
+  color: var(--color-black);
+  margin-inline: auto;
+  max-width: var(--max-content-width);
+  padding-inline: var(--page-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  main {
+    padding-inline: var(--page-padding);
+  }
+}
+
+/* Section utilities */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(var(--spacing) * 10);
+  width: 100%;
+}
+
+.section-divider-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-divider-item:last-child {
+  text-align: right;
+}
+
+/* Header utilities */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: calc(var(--spacing) * 6);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .header {
+    gap: calc(var(--spacing) * 12);
+  }
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(var(--spacing) * 3);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .header-content {
+    gap: calc(var(--spacing) * 6);
+  }
+}
+
+/* Box/Card component */
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .box {
+    flex-direction: row;
+    gap: calc(var(--spacing) * 16);
+  }
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 6);
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .box-content {
+    flex-direction: row;
+  }
+}
+
+.box-content-header {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+  text-transform: uppercase;
+}
+
+.box-content-description {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: pre-wrap;
+}
+
+/* Button utility */
+.btn {
+  background-color: var(--color-secondary-50);
+  border-radius: var(--radius-lg);
+  color: var(--color-secondary);
+  cursor: pointer;
+  padding: calc(var(--spacing) * 2);
+  transition: all 0.3s var(--ease-in-out);
+  display: inline-block;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.btn:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Slash title utility */
+.slash-title {
+  padding-left: calc(var(--spacing) * 8);
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .slash-title {
+    padding-left: calc(var(--spacing) * 34);
+  }
+}
+
+@media (min-width: 1280px) {
+  .slash-title {
+    padding-left: calc(var(--spacing) * 60);
+  }
+}
+
+.slash-title:before {
+  content: "/";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (min-width: 992px) {
+  .slash-title:before {
+    left: calc(var(--spacing) * 13);
+  }
+}
+
+@media (min-width: 1280px) {
+  .slash-title:before {
+    left: calc(var(--spacing) * 30);
+  }
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* No scrollbar utility */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

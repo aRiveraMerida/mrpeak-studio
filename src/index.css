@@ -8,12 +8,57 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   
-  /* Variables de colores para mejor accesibilidad */
+  /* Spacing system - modular 4px base (from Tailor Hub) */
+  --spacing: 0.25rem; /* 4px */
+  --xxl: 200px;
+  --xl: 84px;
+  --l: 48px;
+  --m: 24px;
+  --s: 16px;
+  --xs: 8px;
+  --size-28: 28px;
+  
+  /* Layout (from Tailor Hub) */
+  --page-padding: 40px;
+  --page-padding-mobile: 16px;
+  --max-content-width: 1512px;
+  
+  /* Colors - mantenemos identidad brutal */
+  --color-black: #000000;
   --color-accent: #00E676;
   --color-accent-dark: #00C853;
   --color-bg: #ffffff;
   --color-fg: #000000;
   --color-focus: #0066CC;
+  --color-secondary: #828086;
+  --color-secondary-50: #f5f5f5;
+  
+  /* Typography sizes (from Tailor Hub, ajustados) */
+  --text-title-1: 66px;
+  --text-title-1--line-height: 1.1;
+  --text-title-1-mobile: 46px;
+  --text-title-1-mobile--line-height: 1.1;
+  
+  --text-title-2: 40px;
+  --text-title-2--line-height: 1.2;
+  --text-title-2-mobile: 28px;
+  --text-title-2-mobile--line-height: 1.2;
+  
+  --text-text: 16px;
+  --text-text--line-height: 1.5;
+  
+  --text-mono: 14px;
+  --text-mono--line-height: 1.4;
+  --text-mono--letter-spacing: 0.1em;
+  --text-mono--font-weight: 600;
+  --text-mono-mobile: 12px;
+  --text-mono-mobile--line-height: 1.4;
+  --text-mono-mobile--letter-spacing: 0.08em;
+  --text-mono-mobile--font-weight: 600;
+  
+  /* Transitions (from Tailor Hub) */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --default-transition-duration: 0.15s;
 }
 
 /* Preload optimization for fonts */
@@ -150,25 +195,25 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Clases de animación mejoradas */
+/* Clases de animación mejoradas - más sutiles estilo Tailor Hub */
 .animate-gentle-glow {
   animation: gentleGlow 3s ease-in-out infinite;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: slideInLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: slideInRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-slide-in-up {
-  animation: slideInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: slideInUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-fade-in-scale {
-  animation: fadeInScale 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: fadeInScale 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-pulse-hover:hover {
@@ -257,4 +302,141 @@ h1, h2, h3, h4, h5, h6 {
 
 .skip-link:focus {
   @apply top-4;
+}
+
+/* ========================================
+   Tailor Hub inspired utilities
+   (manteniendo estilo brutal)
+   ======================================== */
+
+/* Typography utility classes */
+.text-style-mono {
+  font-size: var(--text-mono-mobile);
+  line-height: var(--text-mono-mobile--line-height);
+  font-weight: var(--text-mono-mobile--font-weight);
+  letter-spacing: var(--text-mono-mobile--letter-spacing);
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .text-style-mono {
+    font-size: var(--text-mono);
+    line-height: var(--text-mono--line-height);
+    font-weight: var(--text-mono--font-weight);
+    letter-spacing: var(--text-mono--letter-spacing);
+  }
+}
+
+.text-style-text {
+  font-size: var(--text-text);
+  line-height: var(--text-text--line-height);
+}
+
+.text-style-title-1 {
+  font-size: var(--text-title-1-mobile);
+  line-height: var(--text-title-1-mobile--line-height);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .text-style-title-1 {
+    font-size: var(--text-title-1);
+    line-height: var(--text-title-1--line-height);
+  }
+}
+
+.text-style-title-2 {
+  font-size: var(--text-title-2-mobile);
+  line-height: var(--text-title-2-mobile--line-height);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .text-style-title-2 {
+    font-size: var(--text-title-2);
+    line-height: var(--text-title-2--line-height);
+  }
+}
+
+/* Section utilities - más espaciado */
+.section-spacing {
+  padding-top: calc(var(--spacing) * 20); /* 80px */
+  padding-bottom: calc(var(--spacing) * 20); /* 80px */
+}
+
+@media (min-width: 768px) {
+  .section-spacing {
+    padding-top: calc(var(--spacing) * 30); /* 120px */
+    padding-bottom: calc(var(--spacing) * 30); /* 120px */
+  }
+}
+
+.section-spacing-small {
+  padding-top: calc(var(--spacing) * 14); /* 56px */
+  padding-bottom: calc(var(--spacing) * 14); /* 56px */
+}
+
+@media (min-width: 768px) {
+  .section-spacing-small {
+    padding-top: calc(var(--spacing) * 20); /* 80px */
+    padding-bottom: calc(var(--spacing) * 20); /* 80px */
+  }
+}
+
+/* Slash title utility (from Tailor Hub) */
+.slash-title {
+  padding-left: calc(var(--spacing) * 8);
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .slash-title {
+    padding-left: calc(var(--spacing) * 34);
+  }
+}
+
+@media (min-width: 1280px) {
+  .slash-title {
+    padding-left: calc(var(--spacing) * 60);
+  }
+}
+
+.slash-title:before {
+  content: "/";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (min-width: 992px) {
+  .slash-title:before {
+    left: calc(var(--spacing) * 13);
+  }
+}
+
+@media (min-width: 1280px) {
+  .slash-title:before {
+    left: calc(var(--spacing) * 30);
+  }
+}
+
+/* Box content wrappers (from Tailor Hub, con brutal twist) */
+.box-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 6);
+}
+
+@media (min-width: 768px) {
+  .box-content-wrapper {
+    gap: calc(var(--spacing) * 10);
+  }
+}
+
+/* Better selection */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-black);
 }
