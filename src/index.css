@@ -8,7 +8,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   
-  /* Spacing system - modular 4px base (from Tailor Hub) */
+  /* Spacing system - modular 4px base */
   --spacing: 0.25rem; /* 4px */
   --xxl: 200px;
   --xl: 84px;
@@ -18,7 +18,7 @@
   --xs: 8px;
   --size-28: 28px;
   
-  /* Layout (from Tailor Hub) */
+  /* Layout */
   --page-padding: 40px;
   --page-padding-mobile: 16px;
   --max-content-width: 1512px;
@@ -33,7 +33,7 @@
   --color-secondary: #828086;
   --color-secondary-50: #f5f5f5;
   
-  /* Typography sizes (from Tailor Hub, ajustados) */
+  /* Typography sizes */
   --text-title-1: 66px;
   --text-title-1--line-height: 1.1;
   --text-title-1-mobile: 46px;
@@ -56,7 +56,7 @@
   --text-mono-mobile--letter-spacing: 0.08em;
   --text-mono-mobile--font-weight: 600;
   
-  /* Transitions (from Tailor Hub) */
+  /* Transitions */
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   --default-transition-duration: 0.15s;
 }
@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Clases de animación mejoradas - más sutiles estilo Tailor Hub */
+/* Clases de animación mejoradas - más sutiles y profesionales */
 .animate-gentle-glow {
   animation: gentleGlow 3s ease-in-out infinite;
 }
@@ -305,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
-   Tailor Hub inspired utilities
+   Studio utilities
    (manteniendo estilo brutal)
    ======================================== */
 
@@ -385,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Slash title utility (from Tailor Hub) */
+/* Slash title utility */
 .slash-title {
   padding-left: calc(var(--spacing) * 8);
   position: relative;
@@ -422,7 +422,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Box content wrappers (from Tailor Hub, con brutal twist) */
+/* Box content wrappers (con brutal twist) */
 .box-content-wrapper {
   display: flex;
   flex-direction: column;
