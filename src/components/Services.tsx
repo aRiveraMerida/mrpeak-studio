@@ -6,10 +6,10 @@ export const Services: React.FC = () => {
   return (
     <section 
       id="servicios" 
-      className="border-b-4 border-black" 
+      className="border-b-4 border-black section-spacing" 
       aria-labelledby="services-title"
     >
-      <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+      <div className="mx-auto max-w-6xl px-4">
         <header className="mb-12">
           <h2 
             id="services-title"

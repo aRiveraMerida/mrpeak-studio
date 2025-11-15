@@ -4,8 +4,8 @@ import { SITE_DATA } from '../constants/theme';
 
 export const Team: React.FC = () => {
   return (
-    <section id="equipo" className="border-b-4 border-black">
-      <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+    <section id="equipo" className="border-b-4 border-black section-spacing">
+      <div className="mx-auto max-w-6xl px-4">
         <header className="mb-12 text-center">
           <h2 className="text-2xl md:text-4xl font-black tracking-tight mb-4 animate-slide-in-up uppercase">
             AN ELITE TEAM OF STRATEGY, AI & SEO PRACTITIONERS

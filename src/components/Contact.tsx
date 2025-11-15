@@ -9,10 +9,10 @@ export const Contact: React.FC = () => {
   return (
     <section 
       id="contacto" 
-      className="border-b-8 border-black" 
+      className="border-b-8 border-black section-spacing" 
       aria-labelledby="contact-title"
     >
-      <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <div className="mx-auto max-w-6xl px-4">
         <div className="text-center max-w-3xl mx-auto">
           <h2 
             id="contact-title" 

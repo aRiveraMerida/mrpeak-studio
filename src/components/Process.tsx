@@ -4,8 +4,8 @@ import { SITE_DATA } from '../constants/theme';
 
 export const Process: React.FC = () => {
   return (
-    <section id="proceso" className="border-b-4 border-black">
-      <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+    <section id="proceso" className="border-b-4 border-black section-spacing">
+      <div className="mx-auto max-w-6xl px-4">
         <header className="mb-12">
           <h2 className="text-2xl md:text-3xl font-black tracking-tight animate-slide-in-left lowercase">
             how we work

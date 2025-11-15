@@ -6,10 +6,10 @@ export const Hero: React.FC = () => {
   return (
     <section 
       id="top" 
-      className="border-b-4 border-black" 
+      className="border-b-4 border-black section-spacing" 
       aria-labelledby="hero-title"
     >
-      <div className="mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-12 gap-8">
+      <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-12 gap-8 md:gap-12">
         <div className="md:col-span-8">
           <p className="text-xs md:text-sm font-black uppercase tracking-[0.2em] mb-6 animate-slide-in-left text-gray-600">
             STRATEGY · AI · SEO STUDIO
