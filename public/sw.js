@@ -1,9 +1,7 @@
-const CACHE_NAME = 'mrpeakstudio-v1';
+const CACHE_NAME = 'mrpeakstudio-v2';
+// Lista mínima de recursos críticos a cachear
 const urlsToCache = [
-  '/',
-  '/mrpeakstudiologo.webp',
-  '/mps-logo.png',
-  '/manifest.json'
+  '/'
 ];
 
 // Install event - cache resources
@@ -12,7 +10,11 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME)
       .then((cache) => {
         console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+        // Cachear solo recursos que existen y son accesibles
+        return cache.addAll(urlsToCache).catch((err) => {
+          console.warn('Some resources failed to cache:', err);
+          // No fallar el install si algunos recursos no se pueden cachear
+        });
       })
   );
   self.skipWaiting();
@@ -20,6 +22,11 @@ self.addEventListener('install', (event) => {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
+  // Solo cachear GET requests
+  if (event.request.method !== 'GET') {
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
@@ -35,17 +42,26 @@ self.addEventListener('fetch', (event) => {
               return response;
             }
 
-            // Clone the response for caching
-            const responseToCache = response.clone();
+            // Solo cachear recursos de nuestro dominio
+            const url = new URL(event.request.url);
+            if (url.origin === location.origin) {
+              // Clone the response for caching
+              const responseToCache = response.clone();
 
-            caches.open(CACHE_NAME)
-              .then((cache) => {
-                cache.put(event.request, responseToCache);
-              });
+              caches.open(CACHE_NAME)
+                .then((cache) => {
+                  cache.put(event.request, responseToCache);
+                })
+                .catch((err) => console.warn('Failed to cache:', err));
+            }
 
             return response;
           }
-        );
+        ).catch((err) => {
+          console.warn('Fetch failed:', err);
+          // Retornar respuesta offline si está disponible
+          return caches.match('/');
+        });
       })
   );
 });
