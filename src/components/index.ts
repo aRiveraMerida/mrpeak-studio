@@ -7,3 +7,5 @@ export { Cases } from './Cases';
 export { Team } from './Team';
 export { Contact } from './Contact';
 export { Footer } from './Footer';
+export { PeakProject } from './PeakProject';
+export { PeakTeam } from './PeakTeam';

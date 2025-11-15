@@ -16,12 +16,12 @@ export const Contact: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto">
           <h2 
             id="contact-title" 
-            className="text-4xl md:text-5xl font-black tracking-tight mb-6 leading-tight animate-slide-in-up"
+            className="text-3xl md:text-4xl font-black tracking-tight mb-6 leading-tight animate-slide-in-up lowercase"
           >
-            ¿Quieres <span className="text-black bg-[#00C853] px-2 py-1">resultados</span> o discursos?
+            Let's talk about your project
           </h2>
           <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed animate-slide-in-up delay-200">
-            Escríbenos y en <span className="font-bold text-black bg-[#00C853] px-2 py-1">48 horas</span> te proponemos un plan claro. Sin rodeos.
+            Si crees que podemos encajar, cuéntanos en qué estás. Lo revisamos y te decimos si tiene sentido que trabajemos juntos o si es mejor otro enfoque.
           </p>
           
           <Button 
@@ -35,7 +35,7 @@ export const Contact: React.FC = () => {
           </Button>
           
           <p className="mt-8 text-sm md:text-base font-semibold text-gray-600">
-            Respondemos en 48h. Sin spam.
+            Respondemos en 48h. Si no somos la mejor opción, también te lo diremos.
           </p>
         </div>
       </div>

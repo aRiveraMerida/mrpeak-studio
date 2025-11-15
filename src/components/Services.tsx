@@ -10,13 +10,16 @@ export const Services: React.FC = () => {
       aria-labelledby="services-title"
     >
       <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
-        <header className="mb-10">
+        <header className="mb-12">
           <h2 
             id="services-title"
-            className="text-3xl md:text-4xl font-black tracking-tight animate-slide-in-left"
+            className="text-2xl md:text-3xl font-black tracking-tight animate-slide-in-left lowercase"
           >
-            Servicios
+            services
           </h2>
+          <p className="mt-4 text-sm md:text-base font-bold uppercase tracking-wide text-gray-600 animate-slide-in-left delay-200">
+            WE BUILD STRATEGY, AI & SEO SYSTEMS THAT HELP YOUR BUSINESS MOVE FASTER.
+          </p>
         </header>
         
         <div className="grid md:grid-cols-2 gap-8">
@@ -28,6 +31,7 @@ export const Services: React.FC = () => {
               invert={service.invert}
               ariaLabel={`Servicio: ${service.title}`}
             >
+              <div className="text-sm font-black opacity-30 mb-3">{service.number}</div>
               <h3 className="text-2xl md:text-3xl font-black mb-4">{service.title}</h3>
               <p className="text-lg leading-relaxed">{service.desc}</p>
               <Button

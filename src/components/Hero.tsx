@@ -11,23 +11,19 @@ export const Hero: React.FC = () => {
     >
       <div className="mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-12 gap-8">
         <div className="md:col-span-8">
+          <p className="text-xs md:text-sm font-black uppercase tracking-[0.2em] mb-6 animate-slide-in-left text-gray-600">
+            STRATEGY · AI · SEO STUDIO
+          </p>
+
           <h1 
             id="hero-title"
             className="text-4xl md:text-6xl leading-tight font-black tracking-tight animate-slide-in-left"
           >
-            {SITE_DATA.tagline.split(' ').map((word, index) => 
-              word === 'transforman' ? (
-                <span key={index} className="bg-black text-white px-2 animate-gentle-glow">
-                  {word}
-                </span>
-              ) : (
-                <span key={index}> {word}</span>
-              )
-            )}
+            {SITE_DATA.tagline}
           </h1>
           
           <p className="mt-6 text-lg md:text-xl max-w-2xl leading-relaxed animate-slide-in-left delay-200">
-            {SITE_DATA.description} <span className="font-bold text-black bg-[#00C853] px-2 py-1">Solo resultados medibles.</span>
+            {SITE_DATA.description}
           </p>
           
           <div className="mt-8 flex flex-wrap gap-4 animate-slide-in-left delay-300">
@@ -36,18 +32,18 @@ export const Hero: React.FC = () => {
               href="#contacto" 
               variant="primary" 
               size="lg" 
-              ariaLabel="Ir a contacto para obtener resultados"
+              ariaLabel="Contáctanos sobre tu proyecto"
             >
-              Quiero resultados
+              Cuéntame tu proyecto
             </Button>
             <Button 
               asLink 
-              href="#servicios" 
+              href="#proceso" 
               variant="secondary" 
               size="lg"
-              ariaLabel="Ver todos nuestros servicios"
+                ariaLabel="Ver cómo trabajamos"
             >
-              Ver servicios
+              Ver cómo trabajamos
             </Button>
           </div>
           
@@ -72,11 +68,10 @@ export const Hero: React.FC = () => {
             className="p-6 animate-slide-in-right" 
             shadow={true}
             ariaLabel="Propuesta de valor de mrPeakStudio"
-            style={{ backgroundColor: '#00E676' }}
           >
-            <p className="text-sm font-black uppercase tracking-wide">Propuesta directa</p>
+            <p className="text-sm font-black uppercase tracking-wide">En qué encajamos</p>
             <p className="mt-3 text-lg font-semibold leading-relaxed">
-              Menos ruido, más crecimiento. Estrategia clara, ejecución real, medición continua.
+              Pocos proyectos, trabajo cerca del equipo y foco en lo que mueve el negocio: más clientes, mejores procesos y decisiones con datos.
             </p>
           </Card>
         </aside>

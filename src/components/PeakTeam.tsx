@@ -1,22 +1,34 @@
 import React from 'react';
 import { Card } from './ui';
-import { SITE_DATA } from '../constants/theme';
 
-export const Team: React.FC = () => {
+interface TeamMember {
+  name: string;
+  description: string;
+  linkedin: string;
+  invert?: boolean;
+}
+
+interface PeakTeamProps {
+  members: TeamMember[];
+  title: string;
+  subtitle: string;
+}
+
+export const PeakTeam: React.FC<PeakTeamProps> = ({ members, title, subtitle }) => {
   return (
     <section id="equipo" className="border-b-4 border-black">
-      <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
-        <header className="mb-12 text-center">
-          <h2 className="text-2xl md:text-4xl font-black tracking-tight mb-4 animate-slide-in-up uppercase">
-            AN ELITE TEAM OF STRATEGY, AI & SEO PRACTITIONERS
+      <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+        <header className="mb-12">
+          <h2 className="text-2xl md:text-3xl font-black tracking-tight mb-4 animate-slide-in-up lowercase">
+            {title}
           </h2>
-          <p className="text-base md:text-lg font-semibold max-w-2xl mx-auto animate-slide-in-up delay-200">
-            Personas que se sienten más cómodas trabajando que presentando slides.
+          <p className="text-base md:text-lg font-semibold max-w-3xl animate-slide-in-up delay-200">
+            {subtitle}
           </p>
         </header>
         
         <div className="grid md:grid-cols-2 gap-6">
-          {SITE_DATA.team.map((member, index) => (
+          {members.map((member, index) => (
             <a 
               key={member.name}
               href={member.linkedin}
